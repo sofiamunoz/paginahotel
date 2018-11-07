@@ -99,8 +99,7 @@ h1 {
 section {
     padding-left: 3%;
     padding-right: 3%;
-    /*padding:0px 0px;*/ /*innecesario*/
-    /*height: 100vh;*/
+    margin-top: 3%;
     background-image: url(images/hotel.jpg); /*agregué la imagen como background de la section*/
     background-size: cover; /*le puse el size cover para que cubra toda la sección y no tengas problemas con los píxeles*/
     background-repeat: no-repeat; /*lo agregué por las dudas*/
@@ -156,19 +155,17 @@ h2 {
 }
 
 .fila1 {
-    color: #2A0000;
+    /*color: #2A0000;*/
     float: right;
-    width:41%;
-    margin-top:3%;
-    margin-left:3%;
+    width:48%;
+    margin-left:2%;
 }
 
 .fila2 {
     color: #2A0000;
     float: left;
-    width:41%;
-    margin-top:3%;
-    margin-right:3%;
+    width:48%;
+    margin-right:2%;
 }
 
 .bloque1 {
@@ -189,14 +186,8 @@ h2 {
 
 .bloque1 img {
     width:100%;
-    /*width: 40%;*/
-    /*height: 50vh;*/
 }
 
-.habitacionesSection {
-    width:100%;
-    display: block;
-}
 ------------------------------------------------------------------------------------------------------------------
 SERVICIOS
     /*.servicios {margin-top: 30px;
@@ -247,13 +238,19 @@ CONTACTO
 }
 
 .formulario {
+    /*margin: auto;*/
     margin: auto;
-    align-content: center;
+    text-align: center;
     border: 1px solid #666666;
     /*background:#8B7D4E;*/
     background: #3E3D3D;
-    width: 75%;
+    width: 70%;
     /*height: 660px;*/
+
+}
+
+.formulario form{
+    display:block;
 }
 
 label {
@@ -271,7 +268,7 @@ input {
     color: #777;
     /* max-width: 100%;*/
     outline: none;
-    padding: 7px 80px;
+    padding: 7px 0px;
 }
 
 /* si todos los input son iguales los codeo una sola vez en el input general */
