@@ -1,0 +1,401 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*no sé qué es esto que codeaste pero rompía todo así que lo saqué JAJAJA nunca lo h abía visto */
+/** { margin:0px;
+	padding:0px;
+	}*/
+
+body {
+	background-color:#272727;
+	overflow-x: hidden; /*lo agregué para ocultar la barra de desplazamiento horizontal. */	
+	width: 100%;
+}
+
+header { position:relative;
+		background-color:#4D3D29;
+		color:#000000;
+		/*margin:20px;*/ /*innecesario*/
+		/*padding:0px 20px;*/ /*innecesario*/
+		/*height:145px;*/ /*Los height y los width no te conviene ponerlos en px porque se rompe en las diferentes pantallas, no es lo mismo 145px en tu pc que en un celular*/
+		height: 20vh; /*20% de la altura total */
+}
+
+
+nav { 
+	/*padding:0px;*/ /*innecesario*/
+	 /*width:51%;*/ /*El width en porcentaje calcula el ancho de la barra de menú con un porcentaje según el ancho total del elemento que lo contiene, en tu caso el header*/
+	width: 100vw; /*El widht: 100vw te asegura de que el menú ocupe siempre el ancho de la pantalla vw = viewport* sería 100% del viewport*/
+}
+
+nav ul { 
+		/*position:relative;*/ /*innecesario, el header ya tiene la position: relative. */ 
+		/*margin:auto;*/ /*innecesario*/
+		/*width:100%;*/ /*???*/
+		/*z-index:5;*/ /*innecesario*/
+		width: 100vw; 
+
+}
+
+nav li {
+	display:inline-block;
+	/*margin:10px 0px;*/ /*innecesario, igual le puse margin: 0 por las dudas que se rompa algo*/
+	margin: 0;
+	background-color:#8B7D4E;
+	padding: 10px 0 10px 0;
+	width: 18%;
+	text-align: center;
+}
+
+nav a { 
+		/*margin-top:-500px;*/ /*innecesario */
+		/*background-color:#8B7D4E;*/ /*lo moví a nav li porque lo que querés pintar el background del elemento, no del link. */
+		/*display:inline-block;*/ /*lo cambie por display: block por si querés hacer un menú vertical */
+		display: block;
+		/*padding:10px 85px;*/ /*medida en píxeles */
+		/*padding: 10px 0 10px 0;*/ /*lo moví a nav li, porque querés ponerle medidas al nav li, no al link. */
+		text-decoration:none;
+		text-transform:uppercase;
+		color:#FFFFFF;
+		text-align: center; /*le agregué la alineación al texto por las dudas, porque sino el navegador te va a agregar el align que se le dé la gana y se puede romper. */
+	}
+
+
+.logo1 {
+	position:absolute;
+	   width: 25px; 
+	   height: 600%;
+	   left:0%;
+	   margin:0px;
+	  /* padding:5px 10px;*/
+}	
+
+h1 {position:relative;
+	top:20px;
+	height: 30%;
+	width: 30%;
+	left: 5%;	
+	margin:20px;
+	padding:10px 0px;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-size:20px;
+	color:#FFFFFF;
+}	
+
+section{ 
+	/*margin:20px;*/
+	/*padding:0px 0px;*/ /*innecesario*/
+	height: 100vh;
+	background-image: url(images/hotel.jpg); /*agregué la imagen como background de la section*/
+	background-size: cover; /*le puse el size cover para que cubra toda la sección y no tengas problemas con los píxeles*/
+	 background-repeat: no-repeat; /*lo agregué por las dudas*/
+	display: block;
+}
+
+/*.imagenhotel{
+
+}*/
+
+.bienvenida{
+			/* top: 200px;*/
+			/* left:150px;*/
+			 /*z-index: 0;*/ /*0 es el valor default, si no lo ponés es lo mismo*/
+			/* margin:100px;*/
+			/* padding:0px 0px;*/
+	
+}
+
+/*Te olvidaste de crear el css para la imagen de bienvenida*/
+.bienvenida img{
+	widht: 80vw;
+	height: 80vh;
+	/*agregué todo esto para que quede centrado */
+	margin: 0;
+	left: 50%;
+	text-align: center;
+	position: absolute;
+	top: calc(65% + 50px);
+	transform: translate3d(-50%,-50%,0);
+}
+
+------------------------------------------------------------------------------------------------------------------
+/*HABITACIONES*/
+.habitaciones {
+	widht: 100vw;
+	background-color:#272727;
+	background-size: cover;
+	display: block;
+	margin-top: -20px;
+	margin-left:-10px;
+	text-align: center;
+	
+}
+
+h2 {
+	/*font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;*/ /*Pusiste más de una fuente en una sola línea de código así que el navegador leía cualquiera */
+	font-family:"Lucida Grande", Verdana, sans-serif;
+	font-size:20px;
+	color:#FFFFFF;
+	text-align: center; /*alinee el texto al centro porque hay menos probabilidades de que se rompa o se superponga con otra cosa */
+	margin-top: 0px;
+}
+
+.fila1 { color:#2A0000;
+		/*padding:5px 10px;*/
+		/*height:100px;*/
+		/*width:640px;*/
+		/*float:right;*/
+		float: right;
+		/*margin-left:30px;*/
+}
+
+.fila2 { color:#2A0000;
+		/*padding:5px 10px;*/
+		/*width:400px;*/
+		float:left;	
+		/*height:100px;*/
+}
+
+.bloque1 {
+	background-color:#8B7D4E;
+		  color:#BCB182;
+		  width:47vw;
+		  height:80vh;
+		  /*left: -10px;*/
+		 /* margin-top:15px;*/
+}
+
+.bloque1 p{
+	padding: 50px;
+	margin: 0;
+	
+}
+
+.bloque1 img{
+	width: 47vw;
+	/*height: 50vh;*/
+}
+
+
+------------------------------------------------------------------------------------------------------------------
+SERVICIOS
+
+/*.servicios {margin-top: 30px;
+			padding-top:50px;
+}*/
+
+/*.fotosservicios {width:600px;
+				height:300px;
+}*/
+
+/*.fila4 {position: relative;
+		float:left;	
+		width:40px;
+		color:#2A0000;
+		margin-top:0px;
+}*/
+
+/*.fila3 {position: relative;
+		float:right;
+		width:40px;
+		color:#2A0000;
+		margin-right:560px;
+		margin-top:10px;
+}*/
+
+/*lo saqué porque no lo usé */
+/*.bloque2 {background-color:#8B7D4E;
+		  color:#BCB182;
+		  width:600px;  
+}*/
+
+/*creaste h3 y nunca lo usaste jajaja sos hermosa */
+/*h3 {font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-size:20px;
+	color:#FFFFFF;
+	text-align:center;	
+}*/
+
+
+/*.serviciosadicionales {
+	text-align:center;
+	display:inline-block;
+}*/
+
+
+/*lo saqué porque no lo usé */
+/*.bloque3 { padding-top:700px;
+		   left: 60px;
+}*/
+
+------------------------------------------------------------------------------------------------------------------
+CONTACTO
+
+.contacto{ 
+	/*font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;*/
+	font-family:"Lucida Grande", Verdana, sans-serif;
+			font-size:20px;
+			color:#FFFFFF;
+}
+
+
+.formulario{ margin: auto;
+    		align-content: center;
+   			border: 1px solid #666666;
+			/*background:#8B7D4E;*/
+			background:#3E3D3D;
+    		width: 75%;
+			/*height: 660px;*/
+}
+
+label { font-weight: bold; 
+		color: #FFFFFF;
+		font-size: 14px;
+}
+
+input {
+	font-size: 14px;
+	width:60%;
+	margin: 10px 0;
+	 background: #fff;
+    border: 1px solid #ccc;
+    color: #777;
+   /* max-width: 100%;*/
+    outline: none;
+    padding: 7px 80px;
+}
+/* si todos los input son iguales los codeo una sola vez en el input general */
+/*input[type="text"] { margin: 10px 0;
+   					 background: #fff;
+   					 border: 1px solid #ccc;
+   					 color: #777;
+   					 max-width: 100%;
+   					 outline: none;
+   					 padding: 7px 80px;
+}*/
+
+/*input[type="email"] { margin: 10px 0;
+					  background: #fff;
+    				  border: 1px solid #ccc;
+    				  color: #777;
+    				  max-width: 100%;
+    				  outline: none;
+    				  padding: 7px 80px;
+}*/
+
+textarea{ /*margin: 10px 0;
+    	  background: #fff;
+    	  border: 1px solid #ccc;
+    	  color: #777;
+    	  max-width: 100%;
+    	  outline: none;*/
+    	padding: 7px 80px;
+		width: 60%;
+}
+
+input[type="submit"] { 
+    display: block;
+    margin: auto;
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+.masinformacion { text-align:center;
+				  color:#FFFFFF;
+	margin: 50px;
+}
+
+------------------------------------------------------------------------------------------------------------------
+GALERIA
+
+.section2 {
+}
+
+.fotosvideo { 
+position:relative;
+width:25%;
+margin-top:2%;
+margin-left:35%;
+text-align:center;
+}
+
+
+
+------------------------------------------------------------------------------------------------------------------
+FOTOS
+
+.fila6 { position: relative;
+width:13%;
+		/*padding:5px 10px;*/
+		/*height:100px;*/
+		/*width:640px;*/
+		/*float:right;*/
+		float: left;
+		/*margin-left:30px;*/
+}
+
+.fila7 { position: relative;
+		width:13%;
+		/*padding:5px 10px;*/
+		/*width:400px;*/
+		float:left;	
+		/*height:100px;*/
+}
+
+.fila8 { position: relative;
+		/*padding:5px 10px;*/
+		/*height:100px;*/
+		/*width:640px;*/
+		/*float:right;*/
+		width:13%;
+		float: left;
+		/*margin-left:30px;*/
+}
+
+.bloquefotos {
+		  width:37vw;
+		  height:80vh;
+		  /*left: -10px;*/
+		 /* margin-top:15px;*/
+}
+
+.bloquefotos img{
+	width: 27vw;
+	/*height: 50vh;*/
+}
+
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+.parche { clear:both;
+}
+
+/*footer { background-color:#4D3D29;
+		color:#000000;
+		margin: auto;
+		padding:10px 437px;	
+		/*position:absolute;*/
+		/*text-align:center;
+		/*left:20px;*/
+		/*top:1020px;*/ /*nunca hagas esto Cin! es suicidio*/
+		/*position: relative;	
+		height: 20vh;
+}*/
+
+.footer{
+	position: relative;
+	bottom: 0;
+	/*display: block;*/
+	padding: 50px; /*lo puse en píxeles porque es chiquito*/
+	background-color:#4D3D29;
+	height: 5vh;
+	
+}
+
+.footer p{
+	text-align: center;
+	color: #FFF;
+}
