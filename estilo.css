@@ -99,7 +99,7 @@ section {
     /*margin:20px;*/
     /*padding:0px 0px;*/ /*innecesario*/
     /*height: 100vh;*/
-    /*background-image: url(images/hotel.jpg); !*agregué la imagen como background de la section*!*/
+    background-image: url(images/hotel.jpg); /*agregué la imagen como background de la section*/
     background-size: cover; /*le puse el size cover para que cubra toda la sección y no tengas problemas con los píxeles*/
     background-repeat: no-repeat; /*lo agregué por las dudas*/
     display: block;
